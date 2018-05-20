@@ -1,10 +1,9 @@
-//@author Steven Altamirano
-//@group 521702
-//@year 2018
-//@subject ЛОИС
-//@title Лабораторная работа N1-2
-/*@task C2: C: Проверить, является ли формула СКНФ.
-            2: Проверить, является лиф формула общезначимой. */
+/**
+ *@author Steven Altamirano
+ *@title Лабораторная работа N1-2
+ *@task C2: C: Проверить, является ли формула СКНФ.
+          2: Проверить, является лиф формула общезначимой.*/
+ 
 
 // Для проверки СКНФ
  /**
@@ -243,8 +242,12 @@ function changeSymbolToDigit(symbol, uniqueSymbols, binaryNumber) {
  * Функция, вычисления отрицания.
  * @author Альтамирано С. Д.
  */
-function negation(firstElement) {
-    return (firstElement == '0') ? '1' : '0';
+function negation(operand) {
+    if (operand == '0'){
+        return '1';
+    }else{
+        return '0';
+    }
 }
 
 /**
@@ -252,7 +255,11 @@ function negation(firstElement) {
  * @author Альтамирано С. Д.
  */
 function equivalence(firstElement, secondElement) {
-    return ((firstElement == '1' && secondElement == '1') || (firstElement == '0' && secondElement == '0')) ? '1' : '0';
+    if ((firstElement == '1' && secondElement == '1') || (firstElement == '0' && secondElement == '0')){
+        return '1';
+    }else{
+        return '0';
+    }
 }
 
 /**
@@ -260,7 +267,11 @@ function equivalence(firstElement, secondElement) {
  * @author Альтамирано С. Д.
  */
 function implication(firstElement, secondElement) {
-    return (firstElement == '1' && secondElement == '0') ? '0' : '1';
+    if (firstElement == '1' && secondElement == '0'){
+        return '0';
+    }else{
+        return '1';
+    }
 }
 
 /**
@@ -268,7 +279,11 @@ function implication(firstElement, secondElement) {
  * @author Альтамирано С. Д.
  */
 function conjunction(firstElement, secondElement) {
-    return (firstElement == '1' && secondElement == '1') ? '1' : '0';
+    if (firstElement == '1' && secondElement == '1'){
+        return '1';
+    }else{
+        return '0';
+    }
 }
 
 /**
@@ -276,5 +291,9 @@ function conjunction(firstElement, secondElement) {
  * @author Альтамирано С. Д.
  */
 function disjunction(firstElement, secondElement) {
-    return (firstElement == '0' && secondElement == '0') ? '0' : '1';
+    if (firstElement == '0' && secondElement == '0'){
+        return '0';
+    }else{
+        return '1';
+    }
 }
