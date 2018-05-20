@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src='lois_c2.js'></script>
+</head>
+
+<body>
+  <div class="centered">
+    <b style="margin: 0; font-size: 16pt">Введите формулу:</b>
+    <input type="text" id="formula" placeholder="Формула" style="width:600px; margin: 0 0 4px 0">
+    <br>
+    <button id="SKNFCheckButton" onclick="sknfButtonPress()">
+      Проверка корректности СКНФ
+    </button>
+    <button id="UniversalityCheckButton" onclick="universalityButtonPress()">
+      Проверка общезначимости
+    </button>
+    <br>
+    <span id="answer" style="margin: 0; size: 10pt"></span>
+  </div>
+</body>
+
+</html>
